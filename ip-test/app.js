@@ -3,7 +3,8 @@ const app = express();
 const morgan = require('morgan');
 const path = require('path');
 
-const server = app.listen(() => {
+// https://render.com/docs/web-services#host-and-port-configuration
+const server = app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
     // const server = app.listen(3000, '0.0.0.0', () => {
     // const server = app.listen(3000, '127.0.0.1', () => {
     // const server = app.listen(3000, '::', () => {
